@@ -1,46 +1,52 @@
 <?php
-	
-	function fixName($name, $lookFor, $replaceWith)
-	{
-		$name = str_replace($lookFor,$replaceWith,$name);
+/**
+ * Licensed under The MIT License
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @author Christopher Bartholomew cbartholomew@gmail.com
+ */
 
-		$name = strtolower($name);
+function writeJSONResponse($response)
+{
+	header('Content-Type: application/json');
+	echo json_encode($response);
+}
 
-		return $name;
-	}
+function writeHTMLResponse($response)
+{
+	header('Content-Type: text/html');
+	echo $response;
+}
 
-	function writeJSONResponse($response)
-	{
-		header('Content-Type: application/json');
-		echo json_encode($response);
-	}
+function getProperty($txt)
+{
+	$items = explode(":", $txt);
+	return array(
+		"Property" => str_replace("label","",
+							preg_replace("/[^A-Za-z0-9 ]/", '', $items[0])
+					  	),
+		"Value"	   =>  str_replace("</label>","",$items[1])
+	);
+}
 
-	function writeHTMLResponse($response)
-	{
-		header('Content-Type: text/html');
-		echo $response;
-	}
+function fixName($name, $lookFor, $replaceWith)
+{
+	$name = str_replace($lookFor,$replaceWith,$name);
 
-	function getProperty($txt)
-	{
-		$items = explode(":", $txt);
-		return array(
-			"Property" => str_replace("label","",
-								preg_replace("/[^A-Za-z0-9 ]/", '', $items[0])
-						  	),
-			"Value"	   =>  str_replace("</label>","",$items[1])
-		);
-	}
+	$name = strtolower($name);
 
-	function fixImageTag($tag)
-	{
-		$tag = str_replace("<img","",$tag);
-		$tag = str_replace("/>","",$tag);
-		$tag = str_replace("src=","",$tag);
-		$tag = str_replace('"',"",$tag);
-		$tag = str_replace(" ","",$tag);
+	return $name;
+}
 
-		return BASE_URL . $tag;
-	}
+function fixImageTag($tag)
+{
+	$tag = str_replace("<img","",$tag);
+	$tag = str_replace("/>","",$tag);
+	$tag = str_replace("src=","",$tag);
+	$tag = str_replace('"',"",$tag);
+	$tag = str_replace(" ","",$tag);
+
+	return BASE_URL . $tag;
+}
 
 ?>

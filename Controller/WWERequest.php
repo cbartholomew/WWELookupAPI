@@ -1,4 +1,10 @@
 <?php
+/**
+ * Licensed under The MIT License
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @author Christopher Bartholomew cbartholomew@gmail.com
+ */
 
 class WWERequest
 {
