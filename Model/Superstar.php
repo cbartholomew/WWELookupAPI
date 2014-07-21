@@ -1,0 +1,46 @@
+<?php
+require_once("Model/Athlete.php");
+
+class Superstar extends Athlete
+{
+	public $_url;
+
+	function __construct() 
+	{
+		$this->_url = BASE_URI_SUPERSTAR;
+
+		return $this;
+	}
+
+	function setURL($searchFor)
+	{
+		$this->_url = BASE_URI_SUPERSTAR . $searchFor;
+	}
+
+	function set($property, $value)
+	{
+		if($property === HEIGHT)
+		{
+			$this->_height = $value;
+		}
+		else if($property === WEIGHT)
+		{
+			$this->_weight = $value;
+		}
+		else if($property === FROM)
+		{
+			$this->_from = $value;
+		}
+		else if($property === SIGNATURE_MOVE)
+		{
+			$this->_signatureMoves = $value;
+		}
+		else if($property === CAREER_HIGHLIGHTS)
+		{
+			$this->_highlights = $value;
+		}
+	}
+
+}
+
+?>
