@@ -19,6 +19,7 @@
 <h2 class='header'>Requirements</h2>
 	<p>
 		If you are accessing the API Service from its remote location (my hosted server) through the client-side scripts only, then one only needs to import the following scripts and stylesheet into one's application.
+	</p>
 		<div style="display:block">
 			&lt;!--Style Sheet--&gt;
 		</div>
@@ -34,7 +35,6 @@
 		<div style="display:block">
 			&lt;script src="wwe-widget.js" type="text/javascript" &gt;&lt;/script&gt;
 		</div>
-	</p>
 </div>
 <div id="usage">
 <h2 class='header'>Usage</h2>
