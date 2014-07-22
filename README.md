@@ -1,11 +1,4 @@
-<!DOCTYPE html>
 <html>
-<head>
-<title>WWE Lookup API </title>
-	<link 	rel="stylesheet" type="text/css" href="css/wwe-widget.css">
-	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="js/wwe-widget.js"></script>
-</head>
 <body>
 <h1 class='header'>WWE Lookup API Documentation</h1>
 <div id="conents">
@@ -20,19 +13,7 @@
 </div>
 <div id="demo">
 <h2 class='header'>Demo</h2>
-	<p>
-		So there is this one bad-ass wrestler named <superstar>Dean Ambrose</superstar> who use to kick it with <superstar>Seth Rollins</superstar>
-	and <superstar>Roman Reigns</superstar> but <superstar>Triple H</superstar> was all like, "Hey Seth, I made you in NXT - you were champion, remember?". Seth was 
-	all like, "Oh yea, let's do that again. GO CROSSFIT!"
-	</p>
-
-	<p>
-		<superstar>Paul Heyman</superstar>'s client, <superstar>Brock Lesnar</superstar> defeated The <superstar>Undertaker</superstar>'s streak at Wrestlemania 30.
-	</p>
-	
-	<p>
-		There is this one awesome diva by the name of <diva>Aj</diva> Lee. She married <superstar>CM Punk</superstar>, and she was twelve when meeting her wrestling hero <superstar>Lita</superstar>. There is this other awesome diva by the name of <diva>Paige</diva>. She's been wrestling since she was 12, ironically, and she works really hard. Now you stick both of them in a ring...<b><i>Best Feud EVER</i></b>.
-	</p>
+<p>See Web/index.html</p>
 </div>
 <div id="requirements">
 <h2 class='header'>Requirements</h2>
