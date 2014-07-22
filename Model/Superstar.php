@@ -16,6 +16,14 @@ class Superstar extends Athlete
 	{
 		$this->_url = BASE_URI_SUPERSTAR;
 
+		$this->_name 			= "Unknown";
+		$this->_height			= "Unknown";
+		$this->_weight			= "Unknown";
+		$this->_from			= "Unknown";
+		$this->_signatureMoves	= "Unknown";
+		$this->_highlights		= "Unknown";
+		$this->_image			= "Unknown";
+		
 		return $this;
 	}
 
