@@ -13,7 +13,7 @@
 </div>
 <div id="demo">
 <h2 class='header'>Demo</h2>
-<p>See Web/index.html</p>
+<p>See <a href="http://api.christopherbartholomew.me/wwelookupapi/web/index.html">this link</a></p>
 </div>
 <div id="requirements">
 <h2 class='header'>Requirements</h2>
