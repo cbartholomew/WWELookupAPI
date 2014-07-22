@@ -26,7 +26,7 @@ if(empty($request))
 	return;
 }
 
-// make new superstar, diva, or alumini (right WWE? Isn't it that easy? =) )
+// make new superstar or diva (right WWE? Isn't it that easy? =) )
 switch ($type) 
 {
 	case 'superstar':
