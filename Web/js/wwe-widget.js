@@ -8,6 +8,7 @@
  * combined popover.js and tooltip.js to this library for popover usage. All credit
  * for the popover.js and tooltip.js goes to twitter bootstrap.
  */
+var BASE_URL = "../lookup.php";
 
 $(document).ready(function(){
 
@@ -39,7 +40,7 @@ $(document).ready(function(){
 	$.fn.lookup = function(searchFor,type,scope)
 	{
 		$.ajax({
-			url: '../lookup.php?athlete=' + searchFor + "&type=" + type,
+			url: BASE_URL + '?athlete=' + searchFor + "&type=" + type,
 			async:false,
 			cache: false,
 			dataType: 'json',

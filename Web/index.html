@@ -11,12 +11,33 @@
 <div id="conents">
 <h2 class='header'>Contents</h2>
 	<ul>
+		<li><a href="#About">About/Disclaimer</a></li>
 		<li><a href="#demo">Demo</a></li>
 		<li><a href="#requirements">Requirements</a></li>
 		<li><a href="#usage">Usage</a></li>
 		<li><a href="#anomalies">Anomalies</a></li>
 		<li><a href="#technical">Techical Details</a></li>
 	</ul>
+</div>
+<div id="about">
+<h2 class='header'>About/Disclaimer</h2>
+<h4 class='header'>Disclaimer</h4>
+	<p>
+		My name is <a href="https://plus.google.com/+ChristopherBartholomew/">Christopher Bartholomew</a>. I live in Boston, MA. I am not in anyway affliated with World Wrestling Entertainment. I'm just a <b>diehard fan</b> of the business and a pretty decent developer who wants to extend the functionality of what WWE has to offer. <b>All images, trademarks (if any on accident), and content that this API and Service pulls belongs to WWE and WWE.com. I'm merely providing developers a method to access this data outside of WWE. I'm want to make this brand a bit more interactive in the only way I know of - Tech.</b>
+	</p>
+	<p>
+				<img src="images/cmpunk.png" style="float:right" height="250" alt="cmpunk" />
+		<b>Now, if you're a representitive of World Wresting Entertainment (WWE)</b> <i>please</i> don't sue me. Technically, I don't think you can as I can openly access the data remotely without any special authorization keys or access (it's basically a simple data mine). However, if you want me to stop for whatever reason, then please, drop me an e-mail at cbartholomew at gmail dot com. Buuuuut, just keep in mind, that you could also utilize this for yourself, I mean, I <i>may</i> have left some space below the superstar and diva popover for some ads that could be generated on your end...
+	</p>
+	<p>
+		Anyway, please don't sue me &lt;3 kthx.
+	</p>
+	<h4 class='header'>About</h4>
+	<p>
+		This service / api bundle allows developers who normally write about WWE to extend the functionality of their website by having instant access to wrestler profiles straight from WWE.com. For example, if one hovers over this WWE Diva: <diva>Emma</diva> - one would have instant access to the profile attributes straight from WWE.com. The API can be integrated (see <a href="#usage">Usage</a>) into one's website by simply adding two scripts and a stylesheet. If one wishes to extend the functionality of the service further, one can pull down the source code (modify it if one wishs to) and host it oneself.
+
+	</p>
+
 </div>
 <div id="demo">
 <h2 class='header'>Demo</h2>
@@ -37,16 +58,16 @@
 <div id="requirements">
 <h2 class='header'>Requirements</h2>
 	<p>
-		If you are accessing the API Service from its remote location (my hosted server) through the client-side scripts only, then one only needs to import the following scripts and stylesheet into one's application.
+		If one is accessing the API Service from its remote location (my hosted server) through the client-side scripts only, then one only needs to import the following scripts and stylesheet into one's application.
 	</p>
 	<div style="display:block">
-		&lt;!--Style Sheet--&gt;
+		&lt;!--style sheet--&gt;
 	</div>
 	<div style="display:block">
 		&lt;link href="wwe-widget.css" rel="stylesheet" type="text/css" &gt;
 	</div>
 	<div style="display:block">
-		&lt;!--Scripts--&gt;
+		&lt;!--scripts--&gt;
 	</div>
 	<div style="display:block">
 		&lt;script src="//code.jquery.com/jquery-1.11.0.min.js"&gt;&lt;/script&gt;
@@ -54,23 +75,63 @@
 	<div style="display:block">
 		&lt;script src="wwe-widget.js" type="text/javascript" &gt;&lt;/script&gt;
 	</div>
+
+	<p>If one is planning to host this service on one's own web servers see the <a href="#usage">usage</a> section in regards to the "Server Side Service (Optional)"</p>
 </div>
 <div id="usage">
 <h2 class='header'>Usage</h2>
+	<h4 class='header'>Client Side Markup</h4>
 	<p>
-		There are two element tags that must be used for this to work correctly: all <b>male</b> wrestler names should be surrounded by the tag of <b>&lt;superstar&gt;&lt;superstar/&gt;</b> and fall <b>female</b> wrestler names should be surrounded by the tag of <b>&lt;diva&gt;&lt;diva/&gt;</b>*. Once the API is loaded, the text where you identified a superstar or diva should be underlined.  
+		There are two element tags that must be used for this to work correctly: all <b>male</b> wrestler names should be surrounded by the tag of <b>&lt;superstar&gt;&lt;superstar/&gt;</b> and fall <b>female</b> wrestler names should be surrounded by the tag of <b>&lt;diva&gt;&lt;diva/&gt;</b>**. Once the API is loaded, the text where one identifies a superstar or diva should be underlined.  
 	</p>
-
 	<p>
-		* <i>WWE Web Developers don't appear to be the most "organized" of folks. For example, although "Lita" is considered to be a WWE Diva, she's actually listed under "superstars"; therefore, one would need to surround someone like Lita with &lt;superstar&gt;&lt;superstar/&gt; tags instead of diva tags. I have an example of this below in the <a href="#demo">demo</a></i>.
+		<b><i>If one is planning to use the remote endpoint that I provide, all one needs to do is import the scripts, stylesheet, and follow the markup rules above. So, that's it! Otherwise, if one is interested about the service and api interaction then keep reading!</i></b>
+	</p>
+	<p>
+		**<i>WWE Web Developers (or content managers) don't appear to be the most "organized" of folks. For example, although "Lita" is considered to be a WWE Diva, she's actually listed under "superstars"; therefore, one would need to surround someone like Lita with &lt;superstar&gt;&lt;superstar/&gt; tags instead of diva tags. I have an example of this in the <a href="#demo">demo</a></i>. I've also listed some other <a href="#anomalies">anomalies</a> below.
+	</p>
+	<h4 class='header'>API Interaction</h4>
+	<p>
+		The primary remote endpoint for the api is <a href="http://api.christopherbartholomew.me/wwelookupapi/lookup.php">http://api.christopherbartholomew.me/wwelookupapi/lookup.php</a>. The API accepts two parameters via a GET request (currently): <b>athlete</b> and <b>type</b>. The value for the <b>athlete</b> is the actual name of the person. On the otherhand, the <b>type</b> can either be <b>superstar</b>, which are normally male wreslters, or <b>diva</b>, which are normally female wrestlers.  
+	</p>
+		<p><b>EXAMPLE:</b> A normal superstar api interaction for say, "The Rock", would be the following:</p>
+		<p><i>http://api.christopherbartholomew.me/wwelookupapi/lookup.php?athlete=the%20rock&type=superstar</i></p>
+
+		<p><b>EXAMPLE:</b> A normal diva api interaction for say, "Emma", would be the following:</p>
+		<p><i>http://api.christopherbartholomew.me/wwelookupapi/lookup.php?athlete=emma&type=diva</i></p>
+	<p>
+		The API returns a JSON object with a set of properties that can be accessed from the data collection with WWE.com directly (I can't stress this enough - all images, trademarks, and content that this API pulls belongs to WWE and WWE.com. I'm merely providing develoeprs a method to access this data outside of WWE.com's website for cooler interactive functionality). One will notice that some properties are set to "UNKNOWN" - this is because not every demographic detail is provided for each wrestler. For example, no diva's have a weight, lol. 
+	</p>
+	<p><b>EXAMPLE:</b> A successful JSON Response would look like the following:</p>
+	<p><img src="images/response.png"/></p>
+	<h4 class='header'>Server Side Service (Optional)</h4>
+	<p>
+		If one wishes to host the service themselves, one may do so by pulling down the entire source code via <a href="#https://github.com/cbartholomew/WWELookupAPI">GitHub</a>. If one chooses to go this route, one needs to ensure they do the following:
+	</p>
+	<p>
+		<ol>
+			<li>Ensure that PHP 5.3 or greater is installed on the hosted server.</li>
+			<li>Change the Base URL in the wwe-widget.js at the top from "../lookup.php" to wherever one is hosting the service.</li>
+			<li>That's essentially it. I only enabled $_GET requests for the time being, but future update will include a configuration for $_POST only.</li>
+		</ol>
 	</p>
 </div>
 
 <div id="anomalies">
 <h2 class='header'>Anomalies</h2>
+	<p>
+		<ul>
+			<li><p>Divas being catagorized as superstars. See "Lita"</p></li>
+			<li><p><i>"The"</i> in the name. For example to search for "The Rock", one needs to put <i>The Rock</i> between the &lt;superstar&gt;&lt;superstar/&gt; tags. However, "The Undertaker", is actually just "Undertaker". So, in the <a href="#demo">demo</a></i> it's actually listed as The &lt;superstar&gt;<i>Undertaker</i>&lt;superstar/&gt;</p></li>
+			<li><p>Sometimes it's first name only (this is so dumb) there are some superstars, for example Aj Lee, who is listed as just "aj". The demo expresses this using the following markup for Aj Lee: &lt;diva&gt;Aj&lt;diva/&gt;Lee</p></li>
+			<li><p>Yes, I make two checks when there is a space in the name. As I had noted above, WWE Web Developers (or content managers) don't seem to have any real system when it comes to name consistency. Therefore, if I'm given a name like, "Dean Ambrose", the server will first check "dean-ambrose". If I receive a 404 from WWE.com, I then search for "dean ambrose". For example, WWE.com has Seth Rollins as "seth-rollins", yet The Miz, is literally "the miz"</p></li>
+		</ul>
+	</p>
 </div>
 <div id="technical">
 <h2 class='header'>Techical Details</h2>
+<p>Meh, coming soon. The "general" detail of this is that Client Side --> Server API --> WWE.com --> Scrape HTML --> Generate Object --> Output JSON --> Client Scripts</p>
 </div>
+<p>Last Updated: 07/22/2014</p>
 </body>
 </html>
