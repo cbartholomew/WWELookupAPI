@@ -2,14 +2,29 @@
 <html>
 <head>
 <title>WWE Lookup API </title>
+	<style>
+		body { margin-right: auto; margin-left:auto; padding-left: 10%; padding-right:10%; }
+	</style>
 	<link 	rel="stylesheet" type="text/css" href="css/wwe-widget.css">
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="js/wwe-widget.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-30947115-5', 'auto');
+	  ga('send', 'pageview');
+	</script>
 </head>
 <body>
-<h1 class='header'>WWE Lookup API Documentation</h1>
+<div class='header'>
+	<h1>WWE Lookup API Documentation</h1>
+	Created By: <a href="https://plus.google.com/+ChristopherBartholomew/">Christopher Bartholomew</a>
+</div>
 <div id="conents">
-<h2 class='header'>Contents</h2>
+<h2>Contents</h2>
 	<ul>
 		<li><a href="#About">About/Disclaimer</a></li>
 		<li><a href="#demo">Demo</a></li>
@@ -22,14 +37,14 @@
 	</ul>
 </div>
 <div id="about">
-<h2 class='header'>About/Disclaimer</h2>
-	<h4 class='header'>About</h4>
+<h2>About/Disclaimer</h2>
+	<h4 >About</h4>
 	<p>
 		This service / api bundle allows developers (and content contributers) who normally write about WWE to extend the functionality of their website by having instant access to wrestler profiles straight from WWE.com via text. For example, if one hovers over this WWE Diva name: <diva>Emma</diva> - one would have instant access to the profile attributes straight from WWE.com. The API can be integrated (see <a href="#usage">Usage</a>) into one's website by simply adding two scripts (one if you already use jQuery) and a stylesheet. If one wishes to extend the functionality of the service further, one can pull down the source code (modify it if one wishs to) and host it.
 	</p>
-	<h4 class='header'>Disclaimer</h4>
+	<h4 >Disclaimer</h4>
 	<p>
-		My name is <a href="https://plus.google.com/+ChristopherBartholomew/">Christopher Bartholomew</a>. I live in Boston, MA. I am not in anyway affliated with World Wrestling Entertainment. I'm just a <b>diehard fan</b> of the business and a pretty decent developer who wants to extend the functionality of what WWE has to offer. <b>All images, trademarks (if any on accident), and content that this API and Service pulls belongs to WWE and WWE.com. I'm merely providing developers a method to access this data outside of WWE. My goal is to make the WWE brand a bit more interactive from the outside.</b>
+		Hello Friend! I am not in anyway affliated with World Wrestling Entertainment. I'm just a <b>diehard fan</b> of the business and a pretty decent developer who wants to extend the functionality of what WWE has to offer. <b>All images, trademarks (if any on accident), and content that this API and Service pulls belongs to WWE and WWE.com. I'm merely providing developers a method to access this data outside of WWE. My goal is to make the WWE brand a bit more interactive from the outside.</b>
 	</p>
 	<p>
 		<img src="images/cmpunk.png" style="float:right" height="250" alt="cmpunk" />
@@ -42,7 +57,7 @@
 
 </div>
 <div id="demo">
-<h2 class='header'>Demo</h2>
+<h2 >Demo</h2>
 	<p>
 		So there is this one bad-ass wrestler named <superstar>Dean Ambrose</superstar> who use to kick it with <superstar>Seth Rollins</superstar>
 	and <superstar>Roman Reigns</superstar> but <superstar>Triple H</superstar> was all like, "Hey Seth, I created you in NXT - you were the champion, remember?". Seth was 
@@ -58,7 +73,7 @@
 	</p>
 </div>
 <div id="requirements">
-<h2 class='header'>Requirements</h2>
+<h2 >Requirements</h2>
 	<p>
 		If one is accessing the API Service from its remote endpoint (my hosted server) through the client-side script, then one only needs to import the following scripts and stylesheet into one's application (minus jQuery if already using).
 	</p>
@@ -83,8 +98,8 @@
 	</p>
 </div>
 <div id="usage">
-<h2 class='header'>Usage</h2>
-	<h4 class='header'>Client Side Markup</h4>
+<h2 >Usage</h2>
+	<h4 >Client Side Markup</h4>
 	<p>
 		There are two element tags that must be used for this to work correctly: all <b>male</b> wrestler names should be surrounded by the tag of <b>&lt;superstar&gt;&lt;/superstar&gt;</b> and all <b>female</b> wrestler names should be surrounded by the tag of <b>&lt;diva&gt;&lt;/diva&gt;</b>**. Once the API is loaded, the text where one identifies a superstar or diva should be underlined.  
 	</p>
@@ -94,7 +109,7 @@
 	<p>
 		**<i>WWE Web Developers (or content managers) don't appear to be the most "organized" of folks. For example, although "Lita" is considered to be a WWE Diva, she's actually listed under "superstars"; therefore, one would need to surround someone like Lita with &lt;superstar&gt;&lt;/superstar&gt; tags instead of diva tags. I have an example of this in the <a href="#demo">demo</a></i>. I've also listed some other <a href="#anomalies">anomalies</a> below.
 	</p>
-	<h4 class='header'>API Interaction</h4>
+	<h4 >API Interaction</h4>
 	<p>
 		The primary remote endpoint for the api is <a href="http://api.christopherbartholomew.me/wwelookupapi/lookup.php">http://api.christopherbartholomew.me/wwelookupapi/lookup.php</a>. The API accepts two parameters via a GET request (currently): <b>athlete</b> and <b>type</b>. The value for the <b>athlete</b> is the actual name of the person. On the otherhand, the <b>type</b> can either be <b>superstar</b>, which are normally male wreslters, or <b>diva</b>, which are normally female wrestlers.  
 	</p>
@@ -110,7 +125,7 @@
 	</p>
 	<p><b>EXAMPLE:</b> A successful JSON Response would look like the following:</p>
 	<p><img src="images/response.png"/></p>
-	<h4 class='header'>Server Side Service (Optional)</h4>
+	<h4 >Server Side Service (Optional)</h4>
 	<p>
 		If one wishes to host the service themselves, one may do so by pulling down the entire source code via <a href="https://github.com/cbartholomew/WWELookupAPI">GitHub</a>. If one chooses to go this route, one needs to ensure they do the following:
 	</p>
@@ -124,7 +139,7 @@
 </div>
 
 <div id="anomalies">
-<h2 class='header'>Anomalies</h2>
+<h2 >Anomalies</h2>
 	<p>
 		<ul>
 			<li><p>Divas being catagorized as superstars. See "Lita"</p></li>
@@ -135,21 +150,21 @@
 	</p>
 </div>
 <div id="download">
-<h2 class='header'>Download</h2>
+<h2 >Download</h2>
 <p>You can pull down everything you need, including client side scripts, <a href="https://github.com/cbartholomew/WWELookupAPI/archive/master.zip">here</a>.</p>
 </div>
 <div id="technical">
-<h2 class='header'>Techical Details</h2>
+<h2 >Techical Details</h2>
 <p>Meh, coming soon. The "general" detail of this is that Client Side --> Server API --> WWE.com --> Scrape HTML --> Generate Object --> Output JSON --> Client Scripts</p>
 </div>
 <div id="faq">
-<h2 class='header'>FAQ</h2>
+<h2 >FAQ</h2>
 	
 	<h4>Can I change the popover template?</h4>
 	<p>
 		Yes, although the popover is created dynamically using javascript, there are a few ways to accomplish this. If you want to just manipulate the CSS of the existing popover, just simply create a new CSS class in wwe-widget.css and call it in the javascript function <i>$.fn.getContent</i>. The second way to do this is create a html template that can be called using a $.get() and pass it to the html variable. Keep in mind, however, you're still responsible for figuring out a clever method for loading the response variables in the template. 
 	</p>
 </div>
-<p>Last Updated: 07/22/2014</p>
+<p>Last Updated: 07/23/2014</p>
 </body>
 </html>
