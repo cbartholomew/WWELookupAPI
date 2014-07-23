@@ -14,6 +14,7 @@ function writeJSONResponse($response)
 
 function writeHTMLResponse($response)
 {
+	
 	header('Content-Type: text/html');
 	echo $response;
 }

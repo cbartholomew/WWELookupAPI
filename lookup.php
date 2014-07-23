@@ -8,6 +8,9 @@
 
 require("Includes/Config.php");
 
+// allow all origins to make the request
+header('Access-Control-Allow-Origin: *');
+
 $response = array();
 $athlete = NULL;
 
