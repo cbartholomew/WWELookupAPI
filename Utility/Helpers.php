@@ -36,6 +36,9 @@ function fixName($name, $lookFor, $replaceWith)
 
 	$name = strtolower($name);
 
+	// replace apos for someone like "Titus O'Neil"
+	$name = str_replace("'","",$name);
+
 	return $name;
 }
 
