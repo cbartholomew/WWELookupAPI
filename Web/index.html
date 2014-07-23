@@ -32,7 +32,7 @@
 		<li><a href="#usage">Usage</a></li>
 		<li><a href="#anomalies">Anomalies</a></li>
 		<li><a href="#download">Download</a></li>
-		<li><a href="#technical">Techical Details</a></li>
+		<li><a href="#technical">Technical Details</a></li>
 		<li><a href="#faq">FAQ</a></li>
 	</ul>
 </div>
@@ -40,15 +40,15 @@
 <h2>About/Disclaimer</h2>
 	<h4 >About</h4>
 	<p>
-		This service / api bundle allows developers (and content contributers) who normally write about WWE to extend the functionality of their website by having instant access to wrestler profiles straight from WWE.com via text. For example, if one hovers over this WWE Diva name: <diva>Emma</diva> - one would have instant access to the profile attributes straight from WWE.com. The API can be integrated (see <a href="#usage">Usage</a>) into one's website by simply adding two scripts (one if you already use jQuery) and a stylesheet. If one wishes to extend the functionality of the service further, one can pull down the source code (modify it if one wishs to) and host it.
+		This service / api bundle allows developers (and content contributors) who normally write about WWE to extend the functionality of their website by having instant access to wrestler profiles straight from WWE.com via text. For example, if one hovers over this WWE Diva name: <diva>Emma</diva> - one would have instant access to the profile attributes straight from WWE.com. The API can be integrated (see <a href="#usage">Usage</a>) into one's website by simply adding two scripts (one if you already use jQuery) and a stylesheet. If one wishes to extend the functionality of the service further, one can pull down the source code (modify it if one wishes  to) and host it.
 	</p>
 	<h4 >Disclaimer</h4>
 	<p>
-		Hello Friend! I am not in anyway affliated with World Wrestling Entertainment. I'm just a <b>diehard fan</b> of the business and a pretty decent developer who wants to extend the functionality of what WWE has to offer. <b>All images, trademarks (if any on accident), and content that this API and Service pulls belongs to WWE and WWE.com. I'm merely providing developers a method to access this data outside of WWE. My goal is to make the WWE brand a bit more interactive from the outside.</b>
+		Hello Friend! I am not in anyway affiliated with World Wrestling Entertainment. I'm just a <b>diehard fan</b> of the business and a pretty decent developer who wants to extend the functionality of what WWE has to offer. <b>All images, trademarks (if any on accident), and content that this API and Service pulls belongs to WWE and WWE.com. I'm merely providing developers a method to access this data outside of WWE. My goal is to make the WWE brand a bit more interactive from the outside.</b>
 	</p>
 	<p>
 		<img src="images/cmpunk.png" style="float:right" height="250" alt="cmpunk" />
-		<b>Now, if you're a representitive of World Wresting Entertainment (WWE)</b> <i>please</i> don't sue me. Technically, I don't think you can as I can openly access the data remotely without any special authorization keys or access (it's basically a simple data mine). However, if you want me to stop for whatever reason, then please, drop me an e-mail at cbartholomew at gmail dot com. Buuuuut, just keep in mind, that you could also utilize this for yourself, I mean, I <i>may</i> have left some space below the superstar and diva "customizable" popover for some ads that could be generated on your end...
+		<b>Now, if you're a representative  of World Wresting Entertainment (WWE)</b> <i>please</i> don't sue me. Technically, I don't think you can as I can openly access the data remotely without any special authorization keys or access (it's basically a simple data mine). However, if you want me to stop for whatever reason, then please, drop me an e-mail at cbartholomew at gmail dot com. Buuuuut, just keep in mind, that you could also utilize this for yourself, I mean, I <i>may</i> have left some space below the superstar and diva "customizable" popover for some ads that could be generated on your end...
 	</p>
 	<p>
 		Anyway, please don't sue me &lt;3 kthx.
@@ -111,7 +111,7 @@
 	</p>
 	<h4 >API Interaction</h4>
 	<p>
-		The primary remote endpoint for the api is <a href="http://api.christopherbartholomew.me/wwelookupapi/lookup.php">http://api.christopherbartholomew.me/wwelookupapi/lookup.php</a>. The API accepts two parameters via a GET request (currently): <b>athlete</b> and <b>type</b>. The value for the <b>athlete</b> is the actual name of the person. On the otherhand, the <b>type</b> can either be <b>superstar</b>, which are normally male wreslters, or <b>diva</b>, which are normally female wrestlers.  
+		The primary remote endpoint for the api is <a href="http://api.christopherbartholomew.me/wwelookupapi/lookup.php">http://api.christopherbartholomew.me/wwelookupapi/lookup.php</a>. The API accepts two parameters via a GET request (currently): <b>athlete</b> and <b>type</b>. The value for the <b>athlete</b> is the actual name of the person. On the other hand, the <b>type</b> can either be <b>superstar</b>, which are normally male wrestlers, or <b>diva</b>, which are normally female wrestlers.  
 	</p>
 		<p><b>EXAMPLE:</b> A normal superstar api interaction for say, "The Rock", would be the following:</p>
 		<p><i><a href="http://api.christopherbartholomew.me/wwelookupapi/lookup.php?athlete=the%20rock&type=superstar">
@@ -121,7 +121,7 @@
 		<p><i><a href="http://api.christopherbartholomew.me/wwelookupapi/lookup.php?athlete=emma&type=diva">
 			http://api.christopherbartholomew.me/wwelookupapi/lookup.php?athlete=emma&type=diva</a></i></p>
 	<p>
-		The API returns a JSON object with a set of properties that can be accessed from the data collection with WWE.com directly (I can't stress this enough - all images, trademarks, and content that this API pulls belongs to WWE and WWE.com. I'm merely providing develoeprs a method to access this data outside of WWE.com's website for cooler interactive functionality). One will notice that some properties are set to "Unknown" - this is because not every demographic detail is provided for each wrestler. For example, no diva's have a weight, lol. 
+		The API returns a JSON object with a set of properties that can be accessed from the data collection with WWE.com directly (I can't stress this enough - all images, trademarks, and content that this API pulls belongs to WWE and WWE.com. I'm merely providing developers a method to access this data outside of WWE.com's website for cooler interactive functionality). One will notice that some properties are set to "Unknown" - this is because not every demographic detail is provided for each wrestler. For example, no diva's have a weight, lol. 
 	</p>
 	<p><b>EXAMPLE:</b> A successful JSON Response would look like the following:</p>
 	<p><img src="images/response.png"/></p>
@@ -142,7 +142,7 @@
 <h2 >Anomalies</h2>
 	<p>
 		<ul>
-			<li><p>Divas being catagorized as superstars. See "Lita"</p></li>
+			<li><p>Divas being categorized as superstars. See "Lita"</p></li>
 			<li><p><i>"The"</i> in the name. For example to search for "The Rock", one needs to put <i>The Rock</i> between the &lt;superstar&gt;&lt;/superstar&gt; tags. However, "The Undertaker", is actually just "Undertaker". So, in the <a href="#demo">demo</a></i> it's actually listed as The &lt;superstar&gt;<i>Undertaker</i>&lt;/superstar&gt;</p></li>
 			<li><p>Sometimes it's first name only (this is so dumb) there are some superstars, for example Aj Lee, who is listed as just "aj". The demo expresses this using the following markup for Aj Lee: &lt;diva&gt;Aj&lt;/diva&gt;Lee</p></li>
 			<li><p>Yes, I make two checks when there is a space in the name. As I had noted above, WWE Web Developers (or content managers) don't seem to have any real system when it comes to name consistency. Therefore, if I'm given a name like, "Dean Ambrose", the server will first check "dean-ambrose". If I receive a 404 from WWE.com, I then search for "dean ambrose". For example, WWE.com has Seth Rollins as "seth-rollins", yet The Miz, is literally "the miz"</p></li>
@@ -154,7 +154,7 @@
 <p>You can pull down everything you need, including client side scripts, <a href="https://github.com/cbartholomew/WWELookupAPI/archive/master.zip">here</a>.</p>
 </div>
 <div id="technical">
-<h2 >Techical Details</h2>
+<h2 >Technical Details</h2>
 <p>Meh, coming soon. The "general" detail of this is that Client Side --> Server API --> WWE.com --> Scrape HTML --> Generate Object --> Output JSON --> Client Scripts</p>
 </div>
 <div id="faq">
@@ -166,7 +166,7 @@
 	</p>
 	<h4>Why does this website's presentation suck?</h4>
 	<p>
-		Because it's documentetion - what do you expect some rich extravagant html5 and css3 fully dynamic presentation with a intense graphics explaining how to import a script? <i>(grumble grumble whatever happend to the good ol' static html days grumble grumble)</i> :P  
+		Because it's documentation  - what do you expect some rich extravagant html5 and css3 fully dynamic presentation with a intense graphics explaining how to import a script? <i>(grumble grumble whatever happened to the good ol' static html days grumble grumble)</i> :P  
 	</p>
 </div>
 <p>Last Updated: 07/23/2014</p>
